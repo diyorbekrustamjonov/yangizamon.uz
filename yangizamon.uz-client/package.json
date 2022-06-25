@@ -1,0 +1,31 @@
+{
+  "name": "yangizamon.uz-client",
+  "type": "module",
+  "version": "1.2.0",
+  "description": "yangizamon.uz client",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "start:dev": "nodemon src/server.js"
+  },
+  "keywords": [
+    "yangizamon.uz",
+    "yangizamon.uz-client"
+  ],
+  "author": "Diyorbek Rustamjonov <drustamjonov0919@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "helmet": "^5.1.0",
+    "morgan": "^1.10.0"
+  },
+  "imports": {
+    "#views/*": "./src/views/*.js",
+    "#config/*": "./src/config/*.js",
+    "#public/*": "./src/public/*.js",
+    "#controllers/*": "./src/Controllers/*.js",
+    "#routes/*": "./src/Routes/*.js"
+  }
+}
