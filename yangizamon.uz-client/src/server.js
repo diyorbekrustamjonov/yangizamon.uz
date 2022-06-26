@@ -1,10 +1,10 @@
 import express from "express"
 import { resolve } from "path"
-import morgan from "morgan"
-import helmet from "helmet"
-import "#config/index"
-import ejs from "ejs"
 import routes from "./routes.js"
+import helmet from "helmet"
+import ejs from "ejs"
+
+import "#config/index"
 
 !async function () {
     const app = express()
@@ -24,6 +24,8 @@ import routes from "./routes.js"
     // routes
     app.use(routes)
 
+    // Helmet settings
+    app.use(helmet())
 
     try {
         app.listen(PORT, () => {
